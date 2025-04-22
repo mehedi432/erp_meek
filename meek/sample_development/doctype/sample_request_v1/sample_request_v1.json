@@ -1,0 +1,476 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SR-.YYYY.-.#####",
+ "creation": "2025-01-27 09:47:09.060332",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ecpc",
+  "requested_by",
+  "sample_id",
+  "column_break_lqfk",
+  "request_date",
+  "column_break_mcyh",
+  "sample_type",
+  "column_break_pyyu",
+  "production_status",
+  "column_break_wrpl",
+  "designer",
+  "section_break_cjfq",
+  "item_category",
+  "column_break_wsbg",
+  "customer",
+  "column_break_iucj",
+  "style",
+  "column_break_rked",
+  "gauge",
+  "column_break_qmji",
+  "ply",
+  "column_break_sidf",
+  "machine_type",
+  "section_break_bxei",
+  "column_break_ipvj",
+  "weight",
+  "column_break_dosg",
+  "knitting_time",
+  "column_break_bdir",
+  "linking_time",
+  "column_break_vzjs",
+  "expected_delivery_date",
+  "column_break_otmd",
+  "delivery_status",
+  "section_break_xgjs",
+  "material_requirements",
+  "section_break_gfgv",
+  "workstation_details",
+  "section_break_zulk",
+  "requested_quantity",
+  "section_break_hxtz",
+  "approval_status",
+  "column_break_eesa",
+  "approved_by",
+  "column_break_zqqm",
+  "approval_date",
+  "available_comments_section",
+  "available_comments",
+  "section_break_lpea",
+  "feedback_comments",
+  "section_break_xtku",
+  "total_material_cost",
+  "column_break_hlkh",
+  "labor_cost",
+  "column_break_kzpq",
+  "overhead_cost",
+  "column_break_rdyn",
+  "total_cost",
+  "section_break_2dsq",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Requested By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sample_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sample ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_lqfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mcyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sample_type",
+   "fieldtype": "Select",
+   "label": "Sample Type",
+   "options": "Costing\nWash Test\nDevelopment\nFit\nAdd & Omini Sample\nPre-Production (PP)\nSMS\nSize Set",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pyyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "production_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Production Status",
+   "options": "Not Started\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "column_break_wrpl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designer",
+   "fieldtype": "Link",
+   "label": "Designer",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_cjfq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iucj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rked",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "style_name.gauge",
+   "fieldname": "gauge",
+   "fieldtype": "Data",
+   "label": "Gauge"
+  },
+  {
+   "fieldname": "column_break_qmji",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "style_name.ply",
+   "fieldname": "ply",
+   "fieldtype": "Data",
+   "label": "Ply"
+  },
+  {
+   "fieldname": "column_break_sidf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "style_name.machine_type",
+   "fieldname": "machine_type",
+   "fieldtype": "Data",
+   "label": "Machine Type"
+  },
+  {
+   "fieldname": "section_break_bxei",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ipvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "column_break_dosg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "knitting_time",
+   "fieldtype": "Data",
+   "label": "Knitting Time"
+  },
+  {
+   "fieldname": "column_break_bdir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "linking_time",
+   "fieldtype": "Data",
+   "label": "Linking Time"
+  },
+  {
+   "fieldname": "column_break_vzjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Expected Delivery Date"
+  },
+  {
+   "fieldname": "column_break_otmd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_status",
+   "fieldtype": "Select",
+   "label": "Delivery Status",
+   "options": "Not Delivered\nDelivered"
+  },
+  {
+   "fieldname": "section_break_xgjs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "material_requirements",
+   "fieldtype": "Table",
+   "label": "Raw Material Requirements",
+   "options": "Material Requirement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gfgv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "workstation_details",
+   "fieldtype": "Table",
+   "label": "Workstation Details",
+   "options": "Workstation Details"
+  },
+  {
+   "fieldname": "section_break_zulk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_quantity",
+   "fieldtype": "Table",
+   "label": "Requested Quantity",
+   "options": "Sample Request Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hxtz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_eesa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_zqqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "available_comments_section",
+   "fieldtype": "Section Break",
+   "label": "Available Comments"
+  },
+  {
+   "fieldname": "available_comments",
+   "fieldtype": "Table",
+   "options": "Sample Comments"
+  },
+  {
+   "fieldname": "section_break_lpea",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "feedback_comments",
+   "fieldtype": "Markdown Editor",
+   "label": "Feedback Comments"
+  },
+  {
+   "fieldname": "section_break_xtku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Material Cost"
+  },
+  {
+   "fieldname": "column_break_hlkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "label": "Labor Cost"
+  },
+  {
+   "fieldname": "column_break_kzpq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_cost",
+   "fieldtype": "Currency",
+   "label": "Overhead Cost"
+  },
+  {
+   "fieldname": "column_break_rdyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "section_break_2dsq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sample Request V1",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_ecpc",
+   "fieldtype": "Section Break",
+   "label": "Merchandiser Only"
+  },
+  {
+   "default": "SWEATER",
+   "fieldname": "item_category",
+   "fieldtype": "Link",
+   "label": "Item Category",
+   "options": "Item Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wsbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "style_name.buyer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Buyer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Style",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-22 20:32:56.114762",
+ "modified_by": "Administrator",
+ "module": "Sample Development",
+ "name": "Sample Request V1",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Merchandiser",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sample Technical Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Chief Designer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Designer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "General Manager (Marketing & Merchandising)",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
