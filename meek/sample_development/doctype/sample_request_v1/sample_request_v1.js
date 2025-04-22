@@ -36,8 +36,6 @@ frappe.ui.form.on('Sample Request V1', {
     },
 
     refresh: function(frm) {
-        frappe.msgprint("from refresh");
-
         frm.set_value("requested_by", frappe.session.user);
         frm.set_value("request_date", frappe.datetime.now_datetime());
 
@@ -106,7 +104,7 @@ frappe.ui.form.on('Sample Request V1', {
                 if (frm.doc.material_requirement && frm.doc.material_requirement.length > 0) {
                     frm.doc.material_requirement.forEach(row => {
                         if (row.category && row.category.toLowerCase() === "yarn" && row.yarn_composition && row.yarn_count) {
-                            let yarn_item_code = `YARN - ${frm.doc.customer} - ${frm.doc.style} - ${row.yarn_composition} - ${row.yarn_count}`.toUpperCase();
+                            let yarn_item_code = `YARN - ${frm.doc.customer} - ${frm.doc.style} - ${row.yarn_composition} - ${row.yarn_count} - ${row.colour}`.toUpperCase();
                             let yarn_item_name = yarn_item_code;
 
                             frappe.call({
@@ -121,12 +119,22 @@ frappe.ui.form.on('Sample Request V1', {
                                         console.log("Creating Yarn Item:", yarn_item_code);
                                         createItem(yarn_item_code, yarn_item_name, "Yarn item created successfully!", {
                                             item_group: "Yarn",
-                                            description: `Yarn Composition: ${row.yarn_composition}, Yarn Count: ${row.yarn_count}`
+                                            description: `Yarn Composition: ${row.yarn_composition}, Yarn Count: ${row.yarn_count}, Yarn Colour: ${row.yarn_count}`
                                         });
                                     } else {
                                         console.log("Yarn item already exists:", yarn_item_code);
                                     }
                                 }
+                            });
+                        } else {
+                            // Else block: Create the item with category, yarn_composition, and color
+                            let yarn_item_code_else = `${row.category} - ${frm.doc.customer} - ${frm.doc.style} - ${row.yarn_composition} - ${row.color}`.toUpperCase();
+                            let yarn_item_name_else = yarn_item_code_else;
+
+                            console.log("Creating Other Item with Category, Name, and Color:", yarn_item_code_else);
+                            createItem(yarn_item_code_else, yarn_item_name_else, "Other item with Category, Composition, and Color created successfully!", {
+                                item_group: "Yarn",
+                                description: `Item Name: ${row.yarn_composition}, Color: ${row.color}`
                             });
                         }
                     });

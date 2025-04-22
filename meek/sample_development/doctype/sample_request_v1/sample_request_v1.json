@@ -31,8 +31,6 @@
   "weight",
   "column_break_wrpl",
   "column_break_pgxc",
-  "section_break_nylh",
-  "yarn_variant",
   "section_break_xgjs",
   "material_requirement",
   "section_break_zulk",
@@ -400,23 +398,13 @@
   {
    "fieldname": "column_break_sqhe",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_nylh",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "yarn_variant",
-   "fieldtype": "Table",
-   "label": "Yarn Variant",
-   "options": "Yarn Variant"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 22:05:44.899722",
+ "modified": "2025-04-22 23:03:28.819195",
  "modified_by": "Administrator",
  "module": "Sample Development",
  "name": "Sample Request V1",
