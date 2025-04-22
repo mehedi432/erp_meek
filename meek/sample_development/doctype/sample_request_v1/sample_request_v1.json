@@ -15,8 +15,8 @@
   "sample_type",
   "column_break_pyyu",
   "production_status",
-  "column_break_wrpl",
-  "designer",
+  "column_break_tvjj",
+  "technical_file",
   "section_break_cjfq",
   "item_category",
   "column_break_wsbg",
@@ -25,13 +25,22 @@
   "style",
   "column_break_rked",
   "gauge",
-  "column_break_qmji",
+  "column_break_sqhe",
   "ply",
-  "column_break_sidf",
-  "machine_type",
+  "section_break_fkra",
+  "weight",
+  "column_break_wrpl",
+  "column_break_pgxc",
+  "section_break_nylh",
+  "yarn_variant",
+  "section_break_xgjs",
+  "material_requirement",
+  "section_break_zulk",
+  "requested_quantity",
   "section_break_bxei",
   "column_break_ipvj",
-  "weight",
+  "designer",
+  "machine_type",
   "column_break_dosg",
   "knitting_time",
   "column_break_bdir",
@@ -40,12 +49,8 @@
   "expected_delivery_date",
   "column_break_otmd",
   "delivery_status",
-  "section_break_xgjs",
-  "material_requirements",
   "section_break_gfgv",
   "workstation_details",
-  "section_break_zulk",
-  "requested_quantity",
   "section_break_hxtz",
   "approval_status",
   "column_break_eesa",
@@ -147,24 +152,17 @@
    "label": "Gauge"
   },
   {
-   "fieldname": "column_break_qmji",
-   "fieldtype": "Column Break"
-  },
-  {
    "fetch_from": "style_name.ply",
    "fieldname": "ply",
    "fieldtype": "Data",
    "label": "Ply"
   },
   {
-   "fieldname": "column_break_sidf",
-   "fieldtype": "Column Break"
-  },
-  {
    "fetch_from": "style_name.machine_type",
    "fieldname": "machine_type",
-   "fieldtype": "Data",
-   "label": "Machine Type"
+   "fieldtype": "Select",
+   "label": "Machine Type",
+   "options": "SHIMA SHEKI SSR 112\nCHIXING\nGOSHENG\nFENGFANF\nMANUAL"
   },
   {
    "fieldname": "section_break_bxei",
@@ -223,13 +221,6 @@
   {
    "fieldname": "section_break_xgjs",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "material_requirements",
-   "fieldtype": "Table",
-   "label": "Raw Material Requirements",
-   "options": "Material Requirement",
-   "reqd": 1
   },
   {
    "fieldname": "section_break_gfgv",
@@ -381,13 +372,51 @@
    "in_standard_filter": 1,
    "label": "Style",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_fkra",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_pgxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technical_file",
+   "fieldtype": "Attach",
+   "label": "Technical File"
+  },
+  {
+   "fieldname": "material_requirement",
+   "fieldtype": "Table",
+   "label": "Raw Material Requirements",
+   "options": "Material Requirement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tvjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sqhe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nylh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "yarn_variant",
+   "fieldtype": "Table",
+   "label": "Yarn Variant",
+   "options": "Yarn Variant"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 20:32:56.114762",
+ "modified": "2025-04-22 22:05:44.899722",
  "modified_by": "Administrator",
  "module": "Sample Development",
  "name": "Sample Request V1",
