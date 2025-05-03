@@ -36,21 +36,20 @@ frappe.ui.form.on('Sample Request V1', {
     },
 
     refresh: function(frm) {
-        frappe.msgprint("from refresh");
-
-        frm.set_value("requested_by", frappe.session.user);
+        // Don't override 'requested_by' with the email
         frm.set_value("request_date", frappe.datetime.now_datetime());
-
+    
         frm.add_custom_button(__('Create Items'), function () {
             frm.trigger('create_items');
         });
-
+    
         frm.add_custom_button(__('Create Yarn Items'), function () {
             frm.trigger('create_yarn_items');
         });
     },
 
     before_save: function(frm) {
+        
         if (!frm.doc.item_category || !frm.doc.customer || !frm.doc.style) {
             frappe.msgprint("Please fill in the required fields: Item Category, Customer, and Style.");
             frappe.validated = false;
@@ -136,7 +135,7 @@ frappe.ui.form.on('Sample Request V1', {
     }
 });
 
-// Utility Functions
+
 function set_requested_by(frm) {
     if (!frm.doc.requested_by) {
         frappe.call({
@@ -144,18 +143,15 @@ function set_requested_by(frm) {
             args: {
                 doctype: "Employee",
                 filters: { user_id: frappe.session.user },
-                fields: ["name", "employee_name", "user_id"],
+                fields: ["name", "employee_name"], // only fields allowed on client-side
                 limit_page_length: 1
             },
             callback: function (response) {
                 if (response.message && response.message.length > 0) {
                     let employee = response.message[0];
-                    let emp_id = employee.name;
-                    let emp_name = employee.employee_name;
-                    let user_email = employee.user_id;
-
-                    frm.set_value("requested_by", emp_id);
-                    frm.set_df_property("requested_by", "description", `${emp_name} (${user_email})`);
+                    
+                    frm.set_value("requested_by", employee.name); // Link field needs docname
+                    frm.set_df_property("requested_by", "description", employee.employee_name); // Show the name in description
                 } else {
                     frappe.msgprint(__('No Employee record found for this user.'));
                 }

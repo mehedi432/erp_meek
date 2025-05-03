@@ -5,6 +5,11 @@ app_description = "Meek Sweater Ltd. automation software."
 app_email = "mehedi.abdullah.cse@gmail.com"
 app_license = "mit"
 
+fixtures = [
+    "Custom Field"
+]
+
+
 # Apps
 # ------------------
 

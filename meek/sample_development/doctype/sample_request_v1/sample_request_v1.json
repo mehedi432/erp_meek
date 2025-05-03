@@ -1,64 +1,66 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "SR-.YYYY.-.#####",
+ "autoname": "SRN-.YYYY.-.#####",
  "creation": "2025-01-27 09:47:09.060332",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_ecpc",
   "requested_by",
+  "urgency_priority",
   "sample_id",
   "column_break_lqfk",
+  "overall_sample_status",
   "request_date",
   "column_break_mcyh",
-  "sample_type",
-  "column_break_pyyu",
-  "production_status",
-  "column_break_tvjj",
-  "technical_file",
-  "section_break_cjfq",
-  "item_category",
-  "column_break_wsbg",
   "customer",
-  "column_break_iucj",
-  "style",
-  "column_break_rked",
+  "production_status",
+  "column_break_ykpv",
+  "sample_type",
+  "season_collection",
+  "section_break_yvff",
+  "item_category",
   "gauge",
-  "column_break_sqhe",
+  "required_knitting_techniques",
+  "column_break_esly",
+  "style",
   "ply",
-  "section_break_fkra",
+  "brief_style_description__key_features",
+  "column_break_otti",
+  "gender_age_group",
   "weight",
-  "column_break_wrpl",
-  "column_break_pgxc",
-  "section_break_nylh",
-  "yarn_variant",
+  "column_break_hmxs",
+  "technical_file",
+  "reference_image",
+  "target_measurements_chart",
   "section_break_xgjs",
   "material_requirement",
   "section_break_zulk",
   "requested_quantity",
+  "available_comments_section",
+  "available_comments",
+  "design_section_tab",
   "section_break_bxei",
   "column_break_ipvj",
   "designer",
-  "machine_type",
+  "approval_date",
   "column_break_dosg",
-  "knitting_time",
-  "column_break_bdir",
-  "linking_time",
-  "column_break_vzjs",
+  "machine_type",
   "expected_delivery_date",
-  "column_break_otmd",
+  "column_break_bdir",
+  "approval_status",
+  "approved_by",
+  "column_break_vzjs",
   "delivery_status",
+  "section_break_agtp",
+  "knitting_time",
+  "column_break_mnws",
+  "linking_time",
+  "column_break_zraq",
+  "overall_production_status",
   "section_break_gfgv",
   "workstation_details",
-  "section_break_hxtz",
-  "approval_status",
-  "column_break_eesa",
-  "approved_by",
-  "column_break_zqqm",
-  "approval_date",
-  "available_comments_section",
-  "available_comments",
   "section_break_lpea",
   "feedback_comments",
   "section_break_xtku",
@@ -70,7 +72,17 @@
   "column_break_rdyn",
   "total_cost",
   "section_break_2dsq",
-  "amended_from"
+  "amended_from",
+  "delivery_tab",
+  "sample_delivery_status",
+  "column_break_dnfg",
+  "dispatch_method",
+  "column_break_ghrh",
+  "courier_service",
+  "column_break_upfg",
+  "actual_ship_date",
+  "section_break_hnzv",
+  "shipping_details"
  ],
  "fields": [
   {
@@ -108,12 +120,8 @@
    "fieldname": "sample_type",
    "fieldtype": "Select",
    "label": "Sample Type",
-   "options": "Costing\nWash Test\nDevelopment\nFit\nAdd & Omini Sample\nPre-Production (PP)\nSMS\nSize Set",
+   "options": "Costing\nWash Test\nDevelopment\nFit\nAdd & Omini Sample\nPre-Production (PPS)\nSalesman (SMS)\nSize Set\nSwatch / Knit-down\nProto / Development (or Proto Sample)\nCounter Sample\nPhoto Sample\nAd Sample\nWear Test Sample\nTOP / Shipment Sample\nMock-up\nGauge Sample\nLinking Sample\nColor Standard / Lab Dip",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_pyyu",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "production_status",
@@ -124,26 +132,10 @@
    "options": "Not Started\nIn Progress\nCompleted"
   },
   {
-   "fieldname": "column_break_wrpl",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "designer",
    "fieldtype": "Link",
-   "label": "Designer",
+   "label": "Chief Designer",
    "options": "Employee"
-  },
-  {
-   "fieldname": "section_break_cjfq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_iucj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_rked",
-   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "style_name.gauge",
@@ -166,7 +158,8 @@
   },
   {
    "fieldname": "section_break_bxei",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Design Section Only"
   },
   {
    "fieldname": "column_break_ipvj",
@@ -209,10 +202,6 @@
    "label": "Expected Delivery Date"
   },
   {
-   "fieldname": "column_break_otmd",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "delivery_status",
    "fieldtype": "Select",
    "label": "Delivery Status",
@@ -244,28 +233,16 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_hxtz",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "approval_status",
    "fieldtype": "Select",
    "label": "Approval Status",
    "options": "Pending\nApproved\nRejected"
   },
   {
-   "fieldname": "column_break_eesa",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "approved_by",
    "fieldtype": "Link",
    "label": "Approved By",
    "options": "Employee"
-  },
-  {
-   "fieldname": "column_break_zqqm",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "approval_date",
@@ -344,7 +321,7 @@
   {
    "fieldname": "section_break_ecpc",
    "fieldtype": "Section Break",
-   "label": "Merchandiser Only"
+   "label": "Order Request & Client Information"
   },
   {
    "default": "SWEATER",
@@ -353,10 +330,6 @@
    "label": "Item Category",
    "options": "Item Group",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_wsbg",
-   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "style_name.buyer",
@@ -374,14 +347,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_fkra",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_pgxc",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "technical_file",
    "fieldtype": "Attach",
    "label": "Technical File"
@@ -394,29 +359,146 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_tvjj",
+   "fieldname": "column_break_ykpv",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_sqhe",
-   "fieldtype": "Column Break"
+   "fieldname": "season_collection",
+   "fieldtype": "Data",
+   "label": "Season | Collection"
   },
   {
-   "fieldname": "section_break_nylh",
+   "fieldname": "urgency_priority",
+   "fieldtype": "Select",
+   "label": "Urgency Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "overall_sample_status",
+   "fieldtype": "Select",
+   "label": "Overall Sample Status",
+   "options": "Request Submitted\nApproved\nIn Development\nPending Buyer Feedback\nApproved by Buyer\nRejected\nShipped\nCancelled"
+  },
+  {
+   "fieldname": "gender_age_group",
+   "fieldtype": "Select",
+   "label": "Gender Age Group",
+   "options": "Mens\nWomens\nKids\nUnisex\nOthers"
+  },
+  {
+   "fieldname": "reference_image",
+   "fieldtype": "Attach Image",
+   "label": "Reference Image"
+  },
+  {
+   "fieldname": "required_knitting_techniques",
+   "fieldtype": "Data",
+   "label": "Knitting Pattern"
+  },
+  {
+   "fieldname": "target_measurements_chart",
+   "fieldtype": "Attach",
+   "label": "Target Measurements Chart"
+  },
+  {
+   "fieldname": "design_section_tab",
+   "fieldtype": "Tab Break",
+   "label": "Design Section"
+  },
+  {
+   "fieldname": "section_break_yvff",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "yarn_variant",
-   "fieldtype": "Table",
-   "label": "Yarn Variant",
-   "options": "Yarn Variant"
+   "fieldname": "column_break_esly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_otti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hmxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brief_style_description__key_features",
+   "fieldtype": "Small Text",
+   "label": "Brief Style Description / Key Features"
+  },
+  {
+   "fieldname": "section_break_agtp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mnws",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zraq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overall_production_status",
+   "fieldtype": "Select",
+   "label": "Overall Production Status",
+   "options": "Not Started\nSampling\nKnitting\nShipped"
+  },
+  {
+   "fieldname": "delivery_tab",
+   "fieldtype": "Tab Break",
+   "label": "Delivery"
+  },
+  {
+   "fieldname": "column_break_upfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_ship_date",
+   "fieldtype": "Datetime",
+   "label": "Actual Ship Date"
+  },
+  {
+   "fieldname": "section_break_hnzv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shipping_details",
+   "fieldtype": "Small Text",
+   "label": "Shipping Details"
+  },
+  {
+   "fieldname": "sample_delivery_status",
+   "fieldtype": "Select",
+   "label": "Sample Delivery Status",
+   "options": "Pending Dispatch\nDispatched\nIn Transit\nDelivered to Buying House\nDelivered to End Buyer\nDelivery Issue"
+  },
+  {
+   "fieldname": "column_break_dnfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dispatch_method",
+   "fieldtype": "Select",
+   "label": "Dispatch Method",
+   "options": "Courier\nLocal Hand Delivery\nBuyer Pickup"
+  },
+  {
+   "fieldname": "column_break_ghrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "courier_service",
+   "fieldtype": "Select",
+   "label": "Courier Service",
+   "options": "DHL\nFedEx\nAramex\nUPS\nTNT\nLocal Courier\nOther"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-22 22:05:44.899722",
+ "modified": "2025-04-30 16:49:24.546667",
  "modified_by": "Administrator",
  "module": "Sample Development",
  "name": "Sample Request V1",

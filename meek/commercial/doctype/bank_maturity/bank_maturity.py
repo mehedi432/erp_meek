@@ -5,7 +5,5 @@
 from frappe.model.document import Document
 
 
-class SampleRequestV1(Document):
+class BankMaturity(Document):
 	pass
-
-
