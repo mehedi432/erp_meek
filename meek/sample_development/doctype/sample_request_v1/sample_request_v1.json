@@ -34,6 +34,7 @@
   "technical_file",
   "reference_image",
   "target_measurements_chart",
+  "sample_chart",
   "section_break_xgjs",
   "material_requirement",
   "section_break_zulk",
@@ -44,25 +45,36 @@
   "section_break_bxei",
   "column_break_ipvj",
   "designer",
-  "approval_date",
-  "column_break_dosg",
-  "machine_type",
-  "expected_delivery_date",
-  "column_break_bdir",
-  "approval_status",
-  "approved_by",
   "column_break_vzjs",
   "delivery_status",
-  "section_break_agtp",
-  "knitting_time",
-  "column_break_mnws",
-  "linking_time",
-  "column_break_zraq",
+  "column_break_dosg",
   "overall_production_status",
+  "column_break_trcn",
+  "expected_delivery_date",
+  "programmer_section_only_section",
+  "machine_type",
+  "column_break_zgag",
+  "knitting_time",
+  "column_break_rwia",
+  "programmer",
+  "column_break_helz",
+  "program_zip_file",
+  "section_break_agtp",
+  "column_break_melj",
+  "linking_time",
+  "column_break_mnws",
+  "column_break_zraq",
+  "column_break_bdir",
   "section_break_gfgv",
   "workstation_details",
   "section_break_lpea",
   "feedback_comments",
+  "section_break_bpun",
+  "approval_date",
+  "column_break_omkh",
+  "approval_status",
+  "column_break_vyaq",
+  "approved_by",
   "section_break_xtku",
   "total_material_cost",
   "column_break_hlkh",
@@ -492,13 +504,65 @@
    "fieldtype": "Select",
    "label": "Courier Service",
    "options": "DHL\nFedEx\nAramex\nUPS\nTNT\nLocal Courier\nOther"
+  },
+  {
+   "fieldname": "column_break_trcn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bpun",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vyaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "programmer_section_only_section",
+   "fieldtype": "Section Break",
+   "label": "Programmer Section Only"
+  },
+  {
+   "fieldname": "column_break_zgag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rwia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "programmer",
+   "fieldtype": "Link",
+   "label": "Programmer",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_melj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_omkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_helz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_zip_file",
+   "fieldtype": "Attach",
+   "label": "Program Zip File"
+  },
+  {
+   "fieldname": "sample_chart",
+   "fieldtype": "Attach",
+   "label": "Sample Chart"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-04-30 16:49:24.546667",
+ "modified": "2025-05-06 22:08:07.506596",
  "modified_by": "Administrator",
  "module": "Sample Development",
  "name": "Sample Request V1",
@@ -515,7 +579,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -527,7 +590,6 @@
    "report": 1,
    "role": "Merchandiser",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -573,7 +635,6 @@
    "report": 1,
    "role": "General Manager (Marketing & Merchandising)",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

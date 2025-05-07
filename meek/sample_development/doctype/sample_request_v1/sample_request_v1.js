@@ -105,7 +105,7 @@ frappe.ui.form.on('Sample Request V1', {
                 if (frm.doc.material_requirement && frm.doc.material_requirement.length > 0) {
                     frm.doc.material_requirement.forEach(row => {
                         if (row.category && row.category.toLowerCase() === "yarn" && row.yarn_composition && row.yarn_count) {
-                            let yarn_item_code = `YARN - ${frm.doc.customer} - ${frm.doc.style} - ${row.yarn_composition} - ${row.yarn_count}`.toUpperCase();
+                            let yarn_item_code = `YARN -  ${row.yarn_composition} - ${row.yarn_count} - ${frm.doc.customer} - ${frm.doc.style}`.toUpperCase();
                             let yarn_item_name = yarn_item_code;
 
                             frappe.call({
